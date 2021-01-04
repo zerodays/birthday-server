@@ -13,4 +13,13 @@ Solution can be found using the following steps:
 4. Use SQL injection to find the tables and query keys from encryption table. Query params must be URL encoded.
     - To list all tables in sqlite use `select * FROM sqlite_master WHERE type="table" ORDER BY name;`
     - All keys can be listed by visiting url `/runSQLiteQuery?q=select%20%2A%20FROM%20bday_key%3B`.
-5. TODO: instructions on finding key collision.
+5. Factorize keys. Multiple keys may be factorized. Something along the lines of
+   ```python
+   for k1 in keys:
+      for k2 in keys:
+         p = gcd(k1, k2)
+         if p != 1:
+            q = k1 // p
+            # Factorized key k1.
+   ```
+6. Try decrypting the message. Sample code in `python_encrypt.py`.
