@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from bday.views import index
+from bday.views import index, run_sql_query
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
+                  path('runSQLiteQuery', run_sql_query),
                   path('', index)
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

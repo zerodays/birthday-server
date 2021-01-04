@@ -1,8 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
+from django.db import connection
+import json
 
 
 def run_sql_query(request):
-    pass
+    q = request.GET['q']
+    cursor = connection.cursor()
+    cursor.execute(q)
+    result = []
+    for i in cursor.fetchall():
+        result.append(i)
+    return HttpResponse(json.dumps(result))
 
 
 def index(request):

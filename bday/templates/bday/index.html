@@ -7,6 +7,10 @@
     <title>Title</title>
 
     <link rel="stylesheet" href="{% static 'index.css' %}">
+
+    <script>
+        fetch('/thisShouldWorkButDoesnt').then(response => console.log('This should work but doesn\'t.'))
+    </script>
 </head>
 <body>
 
