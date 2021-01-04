@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+
+<div class="hidden">
+    <h1>Skriti zaklad:</h1>
+    <code>31a34c011f1dccab0a649e79e7a4f07a2d907eadee05c7280957f9fbda621cf2f1e9c56a58c381981819e0334e9efba00402965ff4ef80a4c4ccf8c7ac330b245bfc36ed40aa8e70042173627514152960f5916702bd6b8b0b018025f94019bca805ef941ea48fc4e7c82c977aac05e6a418861d761a43646ca0cbbeda9fe57c5e98c375f3bb6559683a4e77e0c73ed489088eb5cf1320abe6f2f6434ff18d80e984c9462ec1db1d6dbdd9c07249e02d1987dff210646a69456fcd118fff5c2c6fb6a1b6f08c99713f0389e87d684007ffce48449d86378c282abb6fef1d62e259bdb26d25f584b6f2cf817b595493138bb90b82eeb9a2a82bb99717f9738a45</code>
+
+    <h1>Ustvarjen je bil takole:</h1>
+    <code>
+        # encoding message to int<br>
+        x = int.from_bytes(m.encode("utf-8"), byteorder='big')<br>
+        <br>
+        # encrypt x<br>
+        encrypted = [unknown algorithm]<br>
+        <br>
+        # encrypt to hex<br>
+        encrypted_hex = encrypted.to_bytes((encrypted.bit_length() + 7) // 8, byteorder='big').hex()<br>
+        print(encrypted_hex)<br>
+    </code>
+
+    <p>Veliko zabave pri dekriptiranju ti želijo 3 opice.</p>
+</div>
+
+<center>
+    <img class="shrek" src="{% static 'img/shrek.gif' %}">
+</center>
+</body>
+</html>
